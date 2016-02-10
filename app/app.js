@@ -7,11 +7,12 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
 	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
-	.state('shop',{
+	.state('',{
 		url:'/',
 		templateUrl:'',
 		controller:'',
 	});
+      
 
 	$httpProvider.interceptors.push(function(){
        return {
