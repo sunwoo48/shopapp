@@ -9,14 +9,14 @@ logout button
 
 
 <section id="admin" class="clearfix">
-	<aside class="nav-panel">
-		<h3>Admin Panel</h3>
+
+		<h1>Product Management </h1>
 		<ul>
-			<li><a ui-sref="admin.dash">Products</a></li>
+			
 			<li><a ui-sref="admin.add_product">Add Product</a></li>
 			<li><a ng-click="ctrl.logout()">Log Out</a></li>
 		</ul>
-	</aside>
+
 
 	<article class="main-content">
 		<div ui-view=""></div>
@@ -27,22 +27,27 @@ logout button
 
 
 
-<div ng-show="ctrl.is_products">
-	<table class="products-list table">
+<div>
+	<table class="">
 		<tr>
 			<th>Category</th>
+			<th>Image</th>
 			<th>Name</th>
 			<th>Price</th>
 			<th>Quantity</th>
+			<th>Description</th>
+			<th>&nbsp;</th>
 			<th>&nbsp;</th>
 		</tr>
 		<tr ng-repeat="product in ctrl.products">
 			<td>{{product.category}}</td>
+			<td>{{product.image}}</td>
 			<td>{{product.name}}</td>
 			<td>{{product.price}}</td>
 			<td>{{product.quantity}}</td>
+			<td>{{product.description}}</td>
 			<td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
-			<td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
+			<td><a ng-click="ctrl.deleteProduct(product)">Delete</a></td>
 		</tr>
 	</table>
 </div>
