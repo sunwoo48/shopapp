@@ -1,12 +1,69 @@
-/*Vinyl*/
+/*Vinyl partial*/
 
-.hero{
+.herovinyl{
     width: 100%;
-    height: 500px;
+    height: 400px;
     position: relative;
-    background: url('../../img/hero.jpg') no-repeat bottom center;
+    background: url('../img/vinylheroimage.jpg') no-repeat bottom center;
     background-size: cover;
+    margin-bottom: -20px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
+
+.herovinyl .heromerch .herotickets .caption{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    margin-top: -105px;
+}
+
+.herovinyl .heromerch .herotickets .caption h2{
+    color: #fff;
+    font-family: "impact_label_reversedregular";
+    font-size: 100px;
+    font-weight: lighter;
+    margin: 0;
+    position: relative;
+    display: block;
+}
+
+.herovinyl .heromerch .herotickets .caption h3{
+    color: #fff;
+    font-family: "impact_label_reversedregular";
+    font-size: 14px;
+    margin: -15px 0 0 25px;
+    left: 1px;
+}
+
+/*Merch partial*/
+
+.heromerch{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background: url('../img/merchheroimage.jpg') no-repeat bottom center;
+    background-size: cover;
+    margin-bottom: -20px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+/*Tickets partial*/
+
+.herotickets{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background: url('../img/ticketsheroimage.jpg') no-repeat bottom center;
+    background-size: cover;
+    margin-bottom: -20px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
