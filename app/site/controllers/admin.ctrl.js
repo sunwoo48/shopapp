@@ -1,6 +1,6 @@
 angular.module('shopApp').controller('AdminCtrl', AdminCtrl);
 
-function AdminCtrl(api) {
+function AdminCtrl(api, productSrv) {
 	var ctrl = this;
 
 }
