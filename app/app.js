@@ -15,7 +15,7 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
   })
   .state('admin',{
     url:'/admin',
-    templateUrl:'site/partials/product.html',
+    templateUrl:'site/partials/admin.html',
     controller:'AdminCtrl as ctrl',
     //TODO #2 Resolve Products before admin page load
   });
