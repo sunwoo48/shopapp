@@ -13,10 +13,30 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     templateUrl:'site/partials/home.html',
     controller:'songControl as ctrl',
   })
-  .state('admin',{
-    url:'/admin',
-    templateUrl:'site/partials/admin.html',
-    controller:'AdminCtrl as ctrl',
+  .state('cart',{
+    url:'/cart',
+    templateUrl:'site/partials/cart.html',
+    controller:'CartCtrl as ctrl',
+  })
+  .state('auth',{
+    url:'/auth',
+    templateUrl:'site/partials/auth.html',
+    controller:'AuthCtrl as ctrl',
+  })
+  .state('add_product',{
+    url:'/add_product',
+    templateUrl:'site/partials/add_prdt.html',
+    controller:'AddPrdt as ctrl',
+  })
+  .state('edit_product',{
+    url:'/edit_product',
+    templateUrl:'site/partials/edit_prdt.html',
+    controller:'EditPrdt as ctrl',
+  })
+  .state('product_management',{
+    url:'/product_management',
+    templateUrl:'site/partials/prdt_mgmt.html',
+    controller:'PrdtMgmt as ctrl',
     //TODO #2 Resolve Products before admin page load
   });
 
