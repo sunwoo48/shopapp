@@ -13,8 +13,14 @@
 			<input type="text" name="image" ng-model="ctrl.product.image" required>
 		</div>
 		<div>
-			<label>Name</label>
-			<input type="text" name="name" ng-model="ctrl.product.name" required>
+			<label>Artist</label>
+			<input type="text" name="name" ng-model="ctrl.product.artist" required>
+		</div>
+			<label>Song</label>
+			<input type="text" name="name" ng-model="ctrl.product.song" required>
+		</div>
+			<label>Label</label>
+			<input type="text" name="name" ng-model="ctrl.product.label" required>
 		</div>
 		<div>
 			<label>Price</label>
@@ -23,10 +29,6 @@
 		<div>
 			<label>Quantity</label>
 			<input type="number" name="quantity" ng-model="ctrl.product.quantity" required>
-		</div>
-		<div>
-			<label>Description</label>
-			<textarea type="text" name="name" ng-model="ctrl.product.description" required></textarea>
 		</div>
 		<div>
 			<button type="submit" ng-click="ctrl.updateProduct()">{{ctrl.product_update_btn}}</button>
