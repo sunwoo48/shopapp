@@ -1,0 +1,41 @@
+
+
+<!-- add new item
+edit or delete ng-repeat item
+logout -->
+
+<div>
+	<div>
+	<h1>Product Management Panel</h1>
+		<div class="">
+			<a ui-sref="AdminAddProduct">Add Product</a>
+		</div>
+		<div class="">	
+			<a ng-click="ctrl.logout()">Log Out</a>
+		</div>
+	</div>
+	<div>			
+		<table class="">
+			<tr>
+				<th>Category</th>
+				<th>Image</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Description</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr ng-repeat="product in ctrl.products">
+				<td>{{product.category}}</td>
+				<td>{{product.image}}</td>
+				<td>{{product.name}}</td>
+				<td>{{product.price}}</td>
+				<td>{{product.quantity}}</td>
+				<td>{{product.description}}</td>
+				<td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
+				<td><a ng-click="ctrl.deleteProduct(product)">Delete</a></td>
+			</tr>
+		</table>
+	</div>	
+</div>
