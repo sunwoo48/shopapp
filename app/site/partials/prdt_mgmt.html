@@ -26,13 +26,13 @@ logout -->
                 <th>&nbsp;</th>
             </tr>
             <tr ng-repeat="product in ctrl.products">
-                <td>{{product.category}}</td>
-                <td>{{product.image}}</td>
-                <td>{{product.artist}}</td>
-                <td>{{product.song}}</td>
-                <td>{{product.label}}</td>
-                <td>{{product.price}}</td>
-                <td>{{product.quantity}}</td>
+                <td>{{ctrl.category}}</td>
+                <td>{{ctrl.image}}</td>
+                <td>{{ctrl.artist}}</td>
+                <td>{{ctrl.song}}</td>
+                <td>{{ctrl.label}}</td>
+                <td>{{ctrl.price}}</td>
+                <td>{{ctrl.quantity}}</td>
                 <td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
                 <td><a ng-click="ctrl.deleteProduct(product)">Delete</a></td>
             </tr>
