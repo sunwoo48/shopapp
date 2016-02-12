@@ -33,15 +33,15 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     templateUrl:'site/partials/edit_prdt.html',
     controller:'EditPrdt as ctrl',
   })
-    .state(aboutus,{
+    .state('about_us',{
     url:'/about_us',
     templateUrl:'site/partials/aboutus.html',
-    controller:'songControl as ctrl',
+    controller:'songCtrl as ctrl',
   })
-    .state('contact',{
-    url:'/contact',
+    .state('contact_us',{
+    url:'/contact_us',
     templateUrl:'site/partials/contact.html',
-    controller:'songControl as ctrl',
+    controller:'songCtrl as ctrl',
   })
   .state('product_management',{
     url:'/product_management',
