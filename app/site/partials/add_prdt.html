@@ -5,26 +5,34 @@
 	<form name="addProduct" class="" ng-submit="ctrl.addProduct()">
 
 		<div>
-			<label>Artist</label>
- 			<input type="text" name="name" ng-model="ctrl.artist" required>
-		</div>
-
- 			<label>Song</label>
- 			<input type="text" name="name" ng-model="ctrl.song" required>
+			<label>Category</label>
+			<select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category">
+			</select>
 		</div>
 		<div>
-			<label>Price</label>
+			<label>Image Filename</label>
 			<input type="text" name="image" ng-model="ctrl.image" required>
 		</div>
 		<div>
+			<label>Artist</label>
+			<input type="text" name="name" ng-model="ctrl.artist" required>
+		</div>
+			<div>
+			<label>Song</label>
+			<input type="text" name="name" ng-model="ctrl.song" required>
+		</div>
+		<div>
+			<label>Price</label>
+			<input type="number" name="price" ng-model="ctrl.price" required>
+		</div>
+		<div>
 			<label>Label</label>
-			<input type="text" name="name" ng-model="ctrl.name" required>
+			<input type="number" name="price" ng-model="ctrl.label" required>
 		</div>
 		<div>
 			<label>Quantity</label>
-			<input type="number" name="price" ng-model="ctrl.price" required>
+			<input type="number" name="quantity" ng-model="ctrl.quantity" required>
 		</div>
-
 		<div>
 			<button type="submit">Add Product</button>
 		</div>
