@@ -3,6 +3,7 @@
 </h2>
 
 <section class="">
+
 		<div>
 			<label>Category</label>
 			<select  name="category" ng-options="option as option.label for option in ctrl.categories" ng-model="ctrl.category">
@@ -30,8 +31,9 @@
 			<label>Quantity</label>
 			<input type="number" name="quantity" ng-model="ctrl.product.quantity" required>
 		</div>
-		<div>
-			<button type="submit" ng-click="ctrl.updateProduct()">{{ctrl.product_update_btn}}</button>
-			<button type="submit" ng-click="ctrl.deleteProduct()">{{ctrl.product_delete_btn}}</button>
-		</div>
+	<div>
+		<button type="submit" ng-click="ctrl.updateProduct()">update</button>
+		<button type="submit" ng-click="ctrl.deleteProduct()">delete</button>
+	</div>
+
 </section>
