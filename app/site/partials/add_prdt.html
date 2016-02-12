@@ -2,8 +2,7 @@
 
 <h2>Add New Product</h2>
 
-	<form name="addProduct" class="" ng-submit="ctrl.addProduct()">
-
+	<form name="addProduct" class="" ng-submit="ctrl.addProduct()" novalidate>
 		<div>
 			<label>Category</label>
 			<select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category">
@@ -30,6 +29,6 @@
 			<textarea type="text" name="name" ng-model="ctrl.description" required></textarea>
 		</div>
 		<div>
-			<button type="submit">Add Product</button>
+			<button type="submit" ng-click="ctrl.submitProduct()">Add Product</button>
 		</div>
 	</form>
