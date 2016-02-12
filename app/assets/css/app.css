@@ -12,7 +12,7 @@
     -o-background-size: cover;
 }
 
-.herovinyl .heromerch .herotickets .caption{
+.herovinyl .caption, .heroaboutus .caption, .herocontact .caption{
     width: 100%;
     position: absolute;
     text-align: center;
@@ -20,7 +20,7 @@
     margin-top: -105px;
 }
 
-.herovinyl .heromerch .herotickets .caption h2{
+.herovinyl .caption h2, .heroaboutus .caption h2, .herocontact .caption h2{
     color: #fff;
     font-family: "impact_label_reversedregular";
     font-size: 100px;
@@ -30,7 +30,7 @@
     display: block;
 }
 
-.herovinyl .heromerch .herotickets .caption h3{
+.herovinyl .caption h3, .heroaboutus .caption h3, .herocontact .caption h3{
     color: #fff;
     font-family: "impact_label_reversedregular";
     font-size: 14px;
@@ -38,13 +38,13 @@
     left: 1px;
 }
 
-/*Merch partial*/
+/*aboutus partial*/
 
-.heromerch{
+.heroaboutus{
     width: 100%;
     height: 400px;
     position: relative;
-    background: url('../img/merchheroimage.jpg') no-repeat bottom center;
+    background: url('../img/aboutushero.jpg') no-repeat bottom center;
     background-size: cover;
     margin-bottom: -20px;
     -webkit-background-size: cover;
@@ -53,17 +53,51 @@
 }
 
 
-/*Tickets partial*/
+/*contact partial*/
 
-.herotickets{
+.herocontact{
     width: 100%;
     height: 400px;
     position: relative;
-    background: url('../img/ticketsheroimage.jpg') no-repeat bottom center;
+    background: url('../img/contacthero.jpg') no-repeat bottom center;
     background-size: cover;
     margin-bottom: -20px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
+
+
+#map p {
+		position: relative;
+        width: 500px;
+        height: 400px;
+        background-color: #CCC;}
+        
+
+
+#map-container p {
+	font-family: "impact_label_reversedregular";
+}
+
+#map-container {
+	float: right;
+	}
+
+#shop-image{
+	width: 100%;
+	height: 500px;
+	background: url('../img/aboutushero.jpg') no-repeat bottom center;
+    background-size: cover;
+
+}
+
+#pformat p{
+
+	font-family: "impact_label_reversedregular";
+ 
+}
+
+
+
 
