@@ -1,38 +1,45 @@
+<div id="wrapper">
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
 <!-- Add new product -->
+				<h2>Add New Product</h2>
 
-<h2>Add New Product</h2>
-
-	<form name="addProduct" class="" ng-submit="ctrl.addProduct()" novalidate>
-		<div>
-			<label>Category</label>
-			<select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category">
-			</select>
+				<form name="addProduct" class="" ng-submit="ctrl.addProduct()" novalidate>
+					<div>
+						<label>Category</label>
+						<select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category">
+						</select>
+					</div>
+					<div>
+						<label>Image Filename</label>
+						<input type="text" name="image" ng-model="ctrl.image" required>
+					</div>
+					<div>
+						<label>Artist</label>
+						<input type="text" name="name" ng-model="ctrl.artist" required>
+					</div>
+						<div>
+						<label>Song</label>
+						<input type="text" name="name" ng-model="ctrl.song" required>
+					</div>
+					<div>
+						<label>Price</label>
+						<input type="number" name="price" ng-model="ctrl.price" required>
+					</div>
+					<div>
+						<label>Label</label>
+						<input type="number" name="price" ng-model="ctrl.label" required>
+					</div>
+					<div>
+						<label>Quantity</label>
+						<input type="number" name="quantity" ng-model="ctrl.quantity" required>
+					</div>
+					<div>
+						<button type="submit" ng-click="ctrl.submitProduct()">Add Product</button>
+					</div>
+				</form>
+			</div>
 		</div>
-		<div>
-			<label>Image Filename</label>
-			<input type="text" name="image" ng-model="ctrl.image" required>
-		</div>
-		<div>
-			<label>Artist</label>
-			<input type="text" name="name" ng-model="ctrl.artist" required>
-		</div>
-			<div>
-			<label>Song</label>
-			<input type="text" name="name" ng-model="ctrl.song" required>
-		</div>
-		<div>
-			<label>Price</label>
-			<input type="number" name="price" ng-model="ctrl.price" required>
-		</div>
-		<div>
-			<label>Label</label>
-			<input type="number" name="price" ng-model="ctrl.label" required>
-		</div>
-		<div>
-			<label>Quantity</label>
-			<input type="number" name="quantity" ng-model="ctrl.quantity" required>
-		</div>
-		<div>
-			<button type="submit" ng-click="ctrl.submitProduct()">Add Product</button>
-		</div>
-	</form>
+	</div>
+</div>

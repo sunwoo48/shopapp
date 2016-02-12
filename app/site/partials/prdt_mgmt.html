@@ -1,41 +1,42 @@
-<!-- add new item
-edit or delete ng-repeat item
-logout -->
+<!-- Page Content -->
+<div id="wrapper">
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Products</h3>
 
-<div>
-    <div>
-    <h1>Product Management Panel</h1>
-        <div class="">
-            <a ui-sref="AdminAddProduct">Add Product</a>
+                        <div ng-hide="ctrl.is_products">
+                            <p>You have no products</p>
+                        </div>
+
+                        <div ng-show="ctrl.is_products">
+                        <table class="products-list table">
+                            <tr>
+                                <th>Category</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Description</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            <tr ng-repeat="product in ctrl.products">
+                               <td>{{product.category}}</td>
+                                <td>{{product.image}}</td>
+                                <td>{{product.name}}</td>
+                                <td>{{product.price}}</td>
+                                <td>{{product.quantity}}</td>
+                                <td>{{product.description}}</td>
+                                <td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
+                                <td><a ng-click="ctrl.deleteProduct(product)">Delete</a></td>
+                            </tr>
+                        </table>
+                        </div>
+                        
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="">  
-            <a ng-click="ctrl.logout()">Log Out</a>
-        </div>
-    </div>
-    <div>           
-        <table class="">
-            <tr>
-                <th>Category</th>
-                <th>Image</th>
-                <th>Artist</th>
-                <th>Song</th>
-                <th>Label</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>&nbsp;</th>
-                <th>&nbsp;</th>
-            </tr>
-            <tr ng-repeat="product in ctrl.products">
-                <td>{{ctrl.category}}</td>
-                <td>{{ctrl.image}}</td>
-                <td>{{ctrl.artist}}</td>
-                <td>{{ctrl.song}}</td>
-                <td>{{ctrl.label}}</td>
-                <td>{{ctrl.price}}</td>
-                <td>{{ctrl.quantity}}</td>
-                <td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
-                <td><a ng-click="ctrl.deleteProduct(product)">Delete</a></td>
-            </tr>
-        </table>
-    </div>  
-</div>
