@@ -1,49 +1,25 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<title>Sign In</title> -->
-
-	<!-- Google Fonts -->
-<!-- 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'> -->
-
-<!-- 	<link rel="stylesheet" href="css/animate.css"> -->
-	<!-- Custom Stylesheet -->
-<!-- 	<link rel="stylesheet" href="css/auth.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-</head> -->
-
-<!--split!!! -->
-<body>
-	<div class="container">
-		<div class="top">
-			<h1 id="title"><span id="logo"> Admin Page</h1>
-		</div>
-		<div class="login-box">
-			<div class="box-header">
-				<h2>Log In</h2>
-			</div>
-			<span class="field-validation-valid" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
-			<label for="EmailAddress">Email</label>
-			<br/>
-			<input type="text" id="EmailAddress" ng-model="ctrl.email" value="" placeholder="Email Address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.email">
-			<br/>
-
-			 <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span>
-			<label for="password">Password</label>
-			<br/>
-			<input type="password" id="password"  ng-model="ctrl.password" placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.password">
-			<br/>
-
-			<input type="submit" value="{{ctrl.auth_btn}}" class="form-input btn btn-primary bs-form__button btn-lg stacked-input-box" ng-click="ctrl.login()" />
-
-			<br/>
-		</div>
-	</div>
-</body>
-
-
-
-</html>
++<div>
+ +	<div>
+ +	<h1 class="">Admin Login</h1>
+ +	</div>
+ +	<!-- Enter email -->
+ +	<div>
+ +		<input ng-model="ctrl.email" class="" type="text" name="email" value="" placeholder="Email"/>
+ +	</div>
+ +
+ +
+ +	<!-- Enter password -->
+ +	<div>
+ +		<input ng-model="ctrl.password" class="" type="password" name="password" placeholder="Password"/>
+ +	</div>
+ +
+ +
+ +
+ +
+ +	<!-- Submit Button -->
+ +	<div>
+ +		<input type="submit" value="{{ctrl.auth_btn}}" class="" ng-click="ctrl.login()" />
+ +	</div>
+ +
+ +
+ +</div>
