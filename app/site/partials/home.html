@@ -65,11 +65,15 @@
 
 	<section class="listings">
 		<div class="wrapper">
-			<h2>Ryans Records Stock</h2>
-			
-			<div class="more_listing">
-				<a href="#" class="more_listing_btn">View More</a>
-			</div>
+		<h2>Ryans Records Stock</h2>
+			<div ng-repeat="movie in ctrl.movies 
+              | filter: {Title:search}
+              | filter:{category:ctrl.category}">
+
+				<div class="more_listing">
+					<a href="#" class="more_listing_btn">View More</a>
+				</div>
+			</div>		
 		</div>
 	</section>	<!--  end listing section  -->
 
