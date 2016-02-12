@@ -23,22 +23,27 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     templateUrl:'site/partials/auth.html',
     controller:'AuthCtrl as ctrl',
   })
-  .state('add_product',{
+   .state('admin',{
+    url:'/admin',
+    templateUrl:'site/partials/prdt_mgmtNav.html',
+    controller:'PrdtMgmt as ctrl',
+  })
+  .state('admin.product_management',{
+    url:'/dashboard',
+    templateUrl:'site/partials/prdt_mgmt.html',
+  })
+
+  .state('admin.add_product',{
     url:'/add_product',
     templateUrl:'site/partials/add_prdt.html',
     controller:'AddPrdt as ctrl',
   })
-  .state('edit_product',{
+    .state('admin.edit_product',{
     url:'/edit_product',
     templateUrl:'site/partials/edit_prdt.html',
     controller:'EditPrdt as ctrl',
   })
-  .state('product_management',{
-    url:'/product_management',
-    templateUrl:'site/partials/prdt_mgmt.html',
-    controller:'PrdtMgmt as ctrl',
-    //TODO #2 Resolve Products before admin page load
-  });
+
 
   $httpProvider.interceptors.push(function(){
        return {
