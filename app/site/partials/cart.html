@@ -1,8 +1,26 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+<div>
+  <h1 class="text-center">Shopping Cart</h1>
+</div>
 
-</body>
-</html>
+<table class="table">
+  <tr>
+    <th>Description</th>
+    <th>Quantity</th>
+    <th>Cost</th>
+    <th>Total</th>
+  </tr>
+  <tr ng-repeat="item in ctrl.products">
+      <td> 
+        <input type="text" align="center" value={{item.Item}}></input>
+      </td>
+      <td> 
+        <input type="number" value={{item.Quantity}}></input>
+      </td>
+      <td> 
+        <input type="number" value={{item.Price}}></input>
+      </td>
+      <td> 
+        <input type="number"></input>
+      </td>
+  </tr>
+</table>
