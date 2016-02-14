@@ -23,6 +23,16 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     templateUrl:'site/partials/cart.html',
     controller:'CartCtrl as ctrl',
   })
+  .state('vinyl',{
+    url:'/vinyl',
+    templateUrl:'site/partials/vinyl.html',
+    controller:'prdtCtrl as ctrl',
+    resolve: {
+      products:function(productSrv){
+        return productSrv.getProducts();
+      }
+    }
+  })
   .state('auth',{
     url:'/auth',
     templateUrl:'site/partials/auth.html',
@@ -51,12 +61,10 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
   .state('admin.add_product',{
     url:'/add_product',
     templateUrl:'site/partials/add_prdt.html',
-    controller:'AddPrdt as ctrl',
   })
     .state('admin.edit_product',{
     url:'/edit_product',
     templateUrl:'site/partials/edit_prdt.html',
-    controller:'EditPrdt as ctrl',
   })
     .state('about_us',{
     url:'/about_us',
@@ -67,16 +75,6 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     url:'/contact_us',
     templateUrl:'site/partials/contact.html',
     controller:'songCtrl as ctrl',
-  })
-    .state('vinyl',{
-    url:'/vinyl',
-    templateUrl:'site/partials/vinyl.html',
-    controller:'songCtrl as ctrl',
-        products:function(productSrv){
-        return productSrv.getProducts();
-      }
-    })
-
   })
 
   $httpProvider.interceptors.push(function(){
@@ -93,6 +91,7 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
            }
        }
    });
+});
 
 
 	//$urlRouterProvider.otherwise('/');
