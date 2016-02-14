@@ -23,16 +23,20 @@ ProductService.prototype.getProducts = function(){
 }
 
 ProductService.prototype.addProduct = function(product){
+	//console.log(product);
 	var _this = this;
-	this.api.request('/products',product,'PUT')
+	this.api.request('/products',product,'POST')
 	.then(function(res){
 		console.log(res);
 		if(res.status === 200){
 			//product was added successfully
 			_this.products.push(res.data.product);
-			_this.state.go('admin.dash');
+			_this.state.go('auth');
 
 		}
+	})
+	.catch(function(err) {
+		console.log(err);
 	})
 }
 
