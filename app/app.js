@@ -57,6 +57,11 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     url:'/vinyl',
     templateUrl:'site/partials/vinyl.html',
     controller:'songCtrl as ctrl',
+        products:function(productSrv){
+        return productSrv.getProducts();
+      }
+    }
+
   })
 
   $httpProvider.interceptors.push(function(){

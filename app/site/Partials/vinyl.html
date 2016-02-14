@@ -104,6 +104,35 @@
 		</div>
 	</section>
 
+	<section class="listings">
+		<div class="wrapper">
+		<h2>Stock</h2>
+		<div class="row">
+				<div ng-repeat="product in ctrl.products">
+					<div class="col-md-4">
+					
+						<img src="" width="150" height="150">
+						<p>{{product.name}}</p>
+						<p>{{product.description}}</p>
+						<p>{{product.category}}</p>
+						<button>Add to Cart</button>
+					</div>
+		</div>
+			</div>
+			<hr>
+		</div>
+
+<!-- 			<div ng-repeat="product in ctrl.products 
+              | filter: {Title:search}
+              | filter:{category:ctrl.category}">
+				<div class="more_listing">
+					<a href="#" class="more_listing_btn">View More</a>
+				</div>
+			</div>	 -->	
+		</div>
+
+	</section>	<!--  end listing section  -->
+
 
 
 
