@@ -43,7 +43,7 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     templateUrl:'site/partials/edit_prdt.html',
     controller:'EditPrdt as ctrl',
   })
-    .state('aboutus',{
+    .state('about_us',{
     url:'/about_us',
     templateUrl:'site/partials/aboutus.html',
     controller:'songCtrl as ctrl',
@@ -51,6 +51,11 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     .state('contact_us',{
     url:'/contact_us',
     templateUrl:'site/partials/contact.html',
+    controller:'songCtrl as ctrl',
+  })
+    .state('vinyl',{
+    url:'/vinyl',
+    templateUrl:'site/partials/vinyl.html',
     controller:'songCtrl as ctrl',
   })
 
