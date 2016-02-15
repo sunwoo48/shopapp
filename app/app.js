@@ -38,6 +38,11 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
       }
     }
   })
+  .state('checkout',{
+    url:'/checkout',
+    templateUrl:'site/partials/checkout.html',
+    controller:'prdtCtrl as ctrl',
+  })
   .state('auth',{
     url:'/auth',
     templateUrl:'site/partials/auth.html',
