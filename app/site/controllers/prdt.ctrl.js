@@ -59,6 +59,12 @@ prdtCtrl.prototype.editProduct = function(product){
 	this.$state.go('admin.edit_product');
 }
 
+prdtCtrl.prototype.addItem = function(product){
+	console.log(product);
+	this.product = product;
+	this.$state.go('cart');
+}
+
 prdtCtrl.prototype.deleteProduct = function(id) {
 	console.log("deleting...");
 	console.log(id);
