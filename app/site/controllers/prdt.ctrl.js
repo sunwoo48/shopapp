@@ -10,7 +10,6 @@ function prdtCtrl(api, productSrv, $location, $state) {
 		
 	}
 
-
 	ctrl.categories = [
 		{label:'Country',value:'country'},
 		{label:'Pop',value:'pop'},
@@ -18,19 +17,13 @@ function prdtCtrl(api, productSrv, $location, $state) {
 		{label:'Dance/EDM',value:'dance/edm'},
 		{label:'Rock',value:'rock'},
 	];
-	//ctrl.albums;
-	//ctrl.name = this.prdtSrv.products;
 	ctrl.products = this.prdtSrv.products;
 	console.log(this.prdtSrv.product);
-	//ctrl.albums = "ryan";
-	//console.log(this.prdtSrv.products);
-	//ctrl.albums = this.prdtSrv;
-
 }
 
 prdtCtrl.prototype.submitProduct = function() {
-	var ctrl = this;
 	
+	var ctrl = this;
 	var album = {
 		name: ctrl.name, 
 		image: ctrl.image,
@@ -39,18 +32,14 @@ prdtCtrl.prototype.submitProduct = function() {
 		price: ctrl.price,
 		quantity: ctrl.quantity,
 	};
-
 	this.prdtSrv.addProduct(album);
 
-	console.log(album);	
 }
 
-// prdtCtrl.prototype.getProducts = function() {
-// 	ctrl.category = this.prdtSrv.getProducts();
-// }
-
-prdtCtrl.prototype.callUpdate = function() {
-	this.albums;
+prdtCtrl.prototype.updateProduct = function() {
+	//console.log(this.product);
+	//console.log(this.product.id);
+	this.prdtSrv.updateProduct(this.product,this.product.id);
 }
 
 prdtCtrl.prototype.editProduct = function(product){
@@ -59,18 +48,22 @@ prdtCtrl.prototype.editProduct = function(product){
 	this.$state.go('admin.edit_product');
 }
 
-prdtCtrl.prototype.addItem = function(product){
-	console.log(product);
-	this.product = product;
-	this.$state.go('cart');
-}
-
 prdtCtrl.prototype.deleteProduct = function(id) {
 	console.log("deleting...");
 	console.log(id);
-	//this.location.path('/admin/dashboard');
 	this.prdtSrv.deleteProduct(id);
-	//console.log("ryan");
-	//console.log(id);
-	//this.prdtSrv.deleteProduct(id);
+	location.reload(); 
+
+}
+
+prdtCtrl.prototype.navTo = function(url){
+	this.location.url(url);
+}
+
+prdtCtrl.prototype.logout = function() {
+	console.log("loggin out....");
+	var ctrl = this;
+
+	localStorage.removeItem('authToken');
+	ctrl.$state.go('auth');
 }
