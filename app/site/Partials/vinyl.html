@@ -109,17 +109,17 @@
 		<h2>Stock</h2>
 		<div class="row">
 				<div ng-repeat="product in ctrl.products">
-					<div class="col-md-4">
+					<div class="col-md-4" "col-sm-6" "col-xs-12">
 					
-						<img src="" width="150" height="150">
+						<img src="{{product.image}}" width="300" height="300">
 						<p>{{product.name}}</p>
-						<p>{{product.description}}</p>
 						<p>{{product.category}}</p>
+						<p>{{product.price | currency}}</p>
 						<button ng-click="ctrl.addItem(product)">Add to Cart</button>
+						<hr>
 					</div>
+				</div>
 		</div>
-			</div>
-			<hr>
 		</div>
 
 <!-- 			<div ng-repeat="product in ctrl.products 
@@ -211,17 +211,11 @@
 
 	<footer>
 		<div class="wrapper footer">
-				<li class="about">
-					<ul>
-						<li><a href="http://facebook.com/pixelhint" class="facebook" target="_blank"></a></li>
-						<li><a href="http://twitter.com/pixelhint" class="twitter" target="_blank"></a></li>
-						<li><a href="http://plus.google.com/+Pixelhint" class="google" target="_blank"></a></li>
-						<li><a href="#" class="skype"></a></li>
-					</ul>
+
 		</div>
 
 		<div class="copyrights wrapper">
-			Copyright © 2015 <a href="http://pixelhint.com" target="_blank" class="ph_link" title="Download more free Templates">RyansRecords.com</a>. All Rights Reserved.
+			Copyright © 2015 <a href="http://pixelhint.com" target="_blank" class="ph_link" title="Download more free Templates">RyansRecords.com</a> All Rights Reserved.
 		</div>
 	</footer><!--  end footer  -->
 	
