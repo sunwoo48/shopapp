@@ -2,7 +2,6 @@
 <!-- add new item
 edit or delete ng-repeat item
 logout -->
-
 <div>
     <div>
     <h1>Product Management Panel</h1>
@@ -13,31 +12,24 @@ logout -->
             <a ng-click="ctrl.logout()">Log Out</a>
         </div>
     </div>
-    <div>           
-        <table class="">
+    <div>     
+        <table class="" style="width:100%">
             <tr>
-                <th>Category</th>
-                <th>Image</th>
-                <th>Artist</th>
-                <th>Song</th>
-                <th>Label</th>
+                <th>Name</th>
                 <th>Price</th>
+                <th>Category</th>
                 <th>Quantity</th>
-                <th>&nbsp;</th>
-                <th>&nbsp;</th>
             </tr>
             <tr ng-repeat="product in ctrl.products">
-                <td>{{ctrl.category}}</td>
-                <td>{{ctrl.image}}</td>
-                <td>{{ctrl.artist}}</td>
-                <td>{{ctrl.song}}</td>
-                <td>{{ctrl.label}}</td>
-                <td>{{ctrl.price}}</td>
-                <td>{{ctrl.quantity}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.category}}</td>
                 <td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
-                <td><a ng-click="ctrl.deleteProduct(product)">Delete</a></td>
+                <td><a ng-click="ctrl.deleteProduct(product.id)">Delete</a></td>
             </tr>
         </table>
     </div>  
-</div>
 
+    
+</div>

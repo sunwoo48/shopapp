@@ -11,39 +11,67 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
   .state('shop',{
     url:'/',
     templateUrl:'site/partials/home.html',
-    controller:'songControl as ctrl',
+    controller:'prdtCtrl as ctrl',
+    resolve: {
+      products:function(productSrv){
+        return productSrv.getProducts();
+      }
+    }
   })
   .state('cart',{
     url:'/cart',
     templateUrl:'site/partials/cart.html',
-    controller:'CartCtrl as ctrl',
+    controller:'prdtCtrl as ctrl',
+        resolve: {
+      products:function(productSrv){
+        return productSrv.getProducts();
+      }
+    }
+  })
+  .state('vinyl',{
+    url:'/vinyl',
+    templateUrl:'site/partials/vinyl.html',
+    controller:'prdtCtrl as ctrl',
+    resolve: {
+      products:function(productSrv){
+        return productSrv.getProducts();
+      }
+    }
   })
   .state('auth',{
     url:'/auth',
     templateUrl:'site/partials/auth.html',
     controller:'AuthCtrl as ctrl',
   })
-    .state('admin',{
+  .state('admin',{
     url:'/admin',
     templateUrl:'site/partials/prdt_mgmtNav.html',
-    controller:'PrdtMgmt as ctrl',
+    controller:'prdtCtrl as ctrl',
+    resolve: {
+      products:function(productSrv){
+        return productSrv.getProducts();
+      }
+    }
+
   })
   .state('admin.product_management',{
     url:'/dashboard',
     templateUrl:'site/partials/prdt_mgmt.html',
+    resolve: {
+      products:function(productSrv){
+        return productSrv.getProducts();
+      }
+    }
   })
-
   .state('admin.add_product',{
     url:'/add_product',
     templateUrl:'site/partials/add_prdt.html',
-    controller:'AddPrdt as ctrl',
   })
     .state('admin.edit_product',{
     url:'/edit_product',
     templateUrl:'site/partials/edit_prdt.html',
-    controller:'EditPrdt as ctrl',
   })
-    .state('aboutus',{
+    .state('about_us',{
     url:'/about_us',
     templateUrl:'site/partials/aboutus.html',
     controller:'songCtrl as ctrl',
@@ -69,6 +97,7 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
        }
    });
 });
+
 
 	//$urlRouterProvider.otherwise('/');
 
