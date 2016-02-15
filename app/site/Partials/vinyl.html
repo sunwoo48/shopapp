@@ -112,10 +112,10 @@
 					<div class="col-md-4" "col-sm-6" "col-xs-12">
 					
 						<img src="{{product.image}}" width="300" height="300">
+						<button class="addCartbtn" ng-click="ctrl.addItem(product)"> <i class="fa fa-cart-plus"></i> Add </button>
 						<p>{{product.name}}</p>
 						<p>{{product.category}}</p>
 						<p>{{product.price | currency}}</p>
-						<button ng-click="ctrl.addItem(product)">Add to Cart</button>
 						<hr>
 					</div>
 				</div>
