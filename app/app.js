@@ -21,7 +21,12 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
   .state('cart',{
     url:'/cart',
     templateUrl:'site/partials/cart.html',
-    controller:'CartCtrl as ctrl',
+    controller:'prdtCtrl as ctrl',
+      resolve: {
+      products:function(productSrv){
+        return productSrv.getProducts();
+      }
+    }
   })
   .state('vinyl',{
     url:'/vinyl',
@@ -32,6 +37,11 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
         return productSrv.getProducts();
       }
     }
+  })
+  .state('checkout',{
+    url:'/checkout',
+    templateUrl:'site/partials/checkout.html',
+    controller:'prdtCtrl as ctrl',
   })
   .state('auth',{
     url:'/auth',
@@ -69,12 +79,12 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     .state('about_us',{
     url:'/about_us',
     templateUrl:'site/partials/aboutus.html',
-    controller:'songCtrl as ctrl',
+    controller:'prdtCtrl as ctrl',
   })
     .state('contact_us',{
     url:'/contact_us',
     templateUrl:'site/partials/contact.html',
-    controller:'songCtrl as ctrl',
+    controller:'prdtCtrl as ctrl',
   })
 
   $httpProvider.interceptors.push(function(){
