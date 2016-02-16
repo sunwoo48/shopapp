@@ -10,6 +10,11 @@ function prdtCtrl(api, productSrv, $location, $state) {
 		
 	}
 
+
+	ctrl.cartItem = [];
+	console.log("-----------");
+	console.log(ctrl.cartItem);
+
 	ctrl.categories = [
 		{label:'Country',value:'country'},
 		{label:'Pop',value:'pop'},
@@ -19,6 +24,7 @@ function prdtCtrl(api, productSrv, $location, $state) {
 	];
 	ctrl.products = this.prdtSrv.products;
 	console.log(this.prdtSrv.product);
+
 }
 
 prdtCtrl.prototype.submitProduct = function() {
@@ -53,8 +59,8 @@ prdtCtrl.prototype.deleteProduct = function(id) {
 	console.log(id);
 	this.prdtSrv.deleteProduct(id);
 	location.reload(); 
-
 }
+
 
 prdtCtrl.prototype.navTo = function(url){
 	this.location.url(url);
@@ -67,3 +73,13 @@ prdtCtrl.prototype.logout = function() {
 	localStorage.removeItem('authToken');
 	ctrl.$state.go('auth');
 }
+
+prdtCtrl.prototype.addItem = function(product){
+	console.log(product);
+	console.log(product.id);
+	this.prdtSrv.updateProductList(product,product.id);
+	console.log(this.prdtSrv.products);
+	//this.cartItem.push(product);
+	//console.log(this.cartItem);
+	//this.$state.go('cart');
+};

@@ -22,7 +22,7 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     url:'/cart',
     templateUrl:'site/partials/cart.html',
     controller:'prdtCtrl as ctrl',
-        resolve: {
+      resolve: {
       products:function(productSrv){
         return productSrv.getProducts();
       }

@@ -1,18 +1,20 @@
-angular.module('shopApp').controller('CartCtrl', CartCtrl);
+// angular.module('shopApp').controller('CartCtrl', CartCtrl);
 
-function CartCtrl(api, productSrv, $state) {
-	var ctrl = this;
-	this.prdtSrv = productSrv;
-	this.$state = $state;
+// function CartCtrl(api, productSrv, $state) {
+// 	console.log("ryan");
+// 	var ctrl = this;
+// 	this.prdtSrv = productSrv;
+// 	this.$state = $state;
 	
-	ctrl.cartItem = {
+// 	ctrl.cartItem = {
 		
-	}
-}
+// 	}
+// }
 
 
-CartCtrl.prototype.addItem = function(cartItem){
-	console.log(product);
-	this.cartItem = cartItem;
-	this.$state.go('cart');
-};
+// CartCtrl.prototype.addItem = function(){
+// 	console.log("working!!");
+// 	console.log(product);
+// 	this.cartItem = cartItem;
+// 	this.$state.go('cart');
+// };
