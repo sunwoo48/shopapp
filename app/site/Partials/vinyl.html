@@ -62,7 +62,7 @@
 	<!-- Category/Genre Search begins here -->
 	<section>
 		<div class="categories">
-			Or pick a genre:  <select class="form-control" ng-options="genre as genre.label for genre in ctrl.genres" ng-model="ctrl.genre"></select>
+			Or pick a genre:  <select class="form-control" ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category"></select>
 		</div>
 	</section>
 	<!-- Category/Genre Search ends here -->
