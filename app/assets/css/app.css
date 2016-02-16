@@ -169,6 +169,16 @@ nav a {
     text-decoration: none;
 }
 
+.fa {
+    display: inline-block;
+    margin-top: 35px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 28px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /*footer copywrite*/
 
 footer .copyrights {
@@ -186,7 +196,7 @@ footer .copyrights {
 /* Checkout page */
 
 .checkoutHolder{
-    width: 300px;
+    width: 0px;
     height: 300px;
     display: inline-block;
     text-align: left;
@@ -200,13 +210,9 @@ footer .copyrights {
 
 }
 
-.checkoutHolderBox{
-
-    width: 650px;
-    height: 300px;
-    float: right;
-    display: inline-block;
-    text-align: center;
+.checkoutHolderBox{   
+    height: 300px; 
+   /* text-align: center;*/
     padding: 20px ;
     margin-top: 0px;
     color: #fff;
