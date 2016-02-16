@@ -171,7 +171,6 @@ nav a {
 
 .fa {
     display: inline-block;
-    margin-top: 35px;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: 28px;
     text-rendering: auto;
@@ -181,11 +180,10 @@ nav a {
 
 /*footer copywrite*/
 
-footer .copyrights {
+footer {
     display: block;
     text-align: center;
     padding: 40px 0;
-    margin-top: 60px;
     color: #fff;
     font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
     font-size: 14px;
