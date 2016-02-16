@@ -18,12 +18,23 @@
 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     color: #626262;
     font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;}
 
 /*Vinyl partial*/
+
+
+.categories{
+
+font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
+margin: 0 auto;
+text-align: center;
+width: 200px;
+font-size: 16px;
+
+}
 
 /*  Hero Section  */
 
@@ -40,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "impact_label_reversedregular";
     font-size: 80px;
     font-weight: lighter;
-    margin: 0;
+    margin-top: 20px;
     position: relative;
     display: block;
 }
@@ -65,6 +76,27 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+}
+
+.list-inline{
+    display: inline-block;
+    padding-left: 10px;
+
+
+}
+
+.list-inline li{
+
+     padding-left: 90px;
+}
+
+
+.imageholder{
+
+    width:900px;
+    margin: 0 auto;
+    position: relative;
+
 }
 
 
@@ -178,18 +210,6 @@ nav a {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/*footer copywrite*/
-
-footer {
-    display: block;
-    text-align: center;
-    padding: 40px 0;
-    color: #fff;
-    font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    letter-spacing: .5px;
-    border-top: 1px solid #82abd4;
-}
 
 /* Checkout page */
 
@@ -209,20 +229,34 @@ footer {
 }
 
 .checkoutHolderBox{   
-    height: 300px; 
-   /* text-align: center;*/
+/*    height: 300px; 
+*/   /* text-align: center;*/
     padding: 20px ;
     margin-top: 0px;
-    color: #fff;
+    color: #000;
     font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: .5px;
     border: 1px solid #000000;
-
-
 }
 
 .checkoutHolder h2 p{
 
     max-width: 200px;
 }
+
+/*footer */
+
+footer {
+    display: block;
+    text-align: center;
+    padding: 40px 0;
+    color: #fff;
+    font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: .5px;
+    border-top: 1px solid #82abd4;
+}
+
+
+
