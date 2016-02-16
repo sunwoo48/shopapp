@@ -79,12 +79,12 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
     .state('about_us',{
     url:'/about_us',
     templateUrl:'site/partials/aboutus.html',
-    controller:'songCtrl as ctrl',
+    controller:'prdtCtrl as ctrl',
   })
     .state('contact_us',{
     url:'/contact_us',
     templateUrl:'site/partials/contact.html',
-    controller:'songCtrl as ctrl',
+    controller:'prdtCtrl as ctrl',
   })
 
   $httpProvider.interceptors.push(function(){
