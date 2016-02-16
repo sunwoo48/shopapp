@@ -1,18 +1,33 @@
-/*Vinyl partial*/
-
-.herovinyl{
-    width: 100%;
-    height: 400px;
-    position: relative;
-    background: url('../img/vinylheroimage.jpg') no-repeat bottom center;
-    background-size: cover;
-    margin-bottom: -20px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.herovinyl .caption, .heroaboutus .caption, .herocontact .caption{
+@font-face {
+    font-family: 'impact_label_reversedregular';
+    src: url('../../../assets/fonts/Impact_Label_Reversed-webfont.eot');
+    src: url('../../../assets/fonts/Impact_Label_Reversed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../assets/fonts/Impact_Label_Reversed-webfont.woff') format('woff'),
+         url('../../../assets/fonts/Impact_Label_Reversed-webfont.ttf') format('truetype'),
+         url('../../../assets/fonts/Impact_Label_Reversed-webfont.svg#impact_label_reversedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #626262;
+    font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;}
+
+/*Vinyl partial*/
+
+/*  Hero Section  */
+
+.caption, .herovinyl .caption, .heroaboutus .caption, .herocontact .caption{
     width: 100%;
     position: absolute;
     text-align: center;
@@ -20,17 +35,17 @@
     margin-top: -105px;
 }
 
-.herovinyl .caption h2, .heroaboutus .caption h2, .herocontact .caption h2{
+.caption h2, .herovinyl .caption h2, .heroaboutus .caption h2, .herocontact .caption h2{
     color: #fff;
     font-family: "impact_label_reversedregular";
-    font-size: 100px;
+    font-size: 80px;
     font-weight: lighter;
     margin: 0;
     position: relative;
     display: block;
 }
 
-.herovinyl .caption h3, .heroaboutus .caption h3, .herocontact .caption h3{
+.caption h3, .herovinyl .caption h3, .heroaboutus .caption h3, .herocontact .caption h3{
     color: #fff;
     font-family: "impact_label_reversedregular";
     font-size: 14px;
@@ -67,6 +82,29 @@
     -o-background-size: cover;
 }
 
+.hero {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background: url('../img/hero.jpg') no-repeat bottom center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.herovinyl{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background: url('../img/vinylheroimage.jpg') no-repeat bottom center;
+    background-size: cover;
+    margin-bottom: -20px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
 
 #map p {
 		position: relative;
@@ -99,5 +137,92 @@
 }
 
 
+/* main nav cart logo */
+
+nav .right-nav {
+    float: right;
+    margin: 0px 70px 0px 0px;
+    vertical-align: top;
+}
+
+nav .cartlogo{
+      width: 20px;
+        height: 20px
+        float: right;
+        margin: 30px 0 0 50px;
+        
+        background: transparent;
+
+        transition: background .1s linear;
+        -webkit-transition: background .1s linear;
+        -moz-transition: background .1s linear;
+        -o-transition: background .1s linear;
+}
+
+nav a:hover{
+    color:#81B5B5;
+    text-decoration: underline;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 28px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*footer copywrite*/
+
+footer {
+    display: block;
+    text-align: center;
+    padding: 40px 0;
+    color: #fff;
+    font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: .5px;
+    border-top: 1px solid #82abd4;
+}
+
+/* Checkout page */
+
+.checkoutHolder{
+    width: 0px;
+    height: 300px;
+    display: inline-block;
+    text-align: left;
+    padding: 20px ;
+    margin-top: 0px;
+    color: #fff;
+    font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: .5px;
+    border: 1px solid #000000;
+
+}
+
+.checkoutHolderBox{   
+    height: 300px; 
+   /* text-align: center;*/
+    padding: 20px ;
+    margin-top: 0px;
+    color: #fff;
+    font-family: "impact_label_reversedregular", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: .5px;
+    border: 1px solid #000000;
 
 
+}
+
+.checkoutHolder h2 p{
+
+    max-width: 200px;
+}
