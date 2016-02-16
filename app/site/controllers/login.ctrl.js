@@ -17,6 +17,8 @@ function AuthCtrl($state,api){
 }
 
 AuthCtrl.prototype.login = function(){
+	//console.log("loggin in");
+
 	var ctrl = this;
 
 	var payload = {
@@ -33,7 +35,7 @@ AuthCtrl.prototype.login = function(){
 			ctrl.auth_btn = "Success";
 			//user exists
 			if(res.data.user != null){
-				ctrl.$state.go('admin.dash');
+				ctrl.$state.go('admin.product_management');
 			}
 		}
 		else{
