@@ -112,7 +112,8 @@
 				<div ng-repeat="product in ctrl.products
 				| filter:search
 				| filter: ctrl.category">
-					<div class="col-md-4" "col-xs-12">
+				
+				<div class="col-md-4" "col-xs-12">
 					
 						<img src="{{product.image}}" width="300" height="300">
 						<button class="addCartbtn" ng-click="ctrl.addItem(product)"> <i class="fa fa-cart-plus"></i> Add </button>
