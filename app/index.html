@@ -8,7 +8,6 @@
          async defer></script>
 	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 	<script type="text/javascript" src="app.js"></script>
-	
 	<script type="text/javascript" src="site/controllers/song.ctrl.js"></script>
 	<script type="text/javascript" src="site/controllers/auth.ctrl.js"></script>
 	<script type="text/javascript" src="site/controllers/cart.ctrl.js"></script>
@@ -22,6 +21,18 @@
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!--Soundcloud player-->
+
+	<script type="text/javascript" src="assets/js/vendor/soundcloud.player.api.js"></script>
+<script type="text/javascript">
+   soundcloud.addEventListener('onPlayerReady', function(player, data) {
+     player.api_play();
+   });
+</script>
+
+	<!--Soundcloud player-->
+
 	
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
