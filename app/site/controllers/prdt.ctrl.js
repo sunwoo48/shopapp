@@ -15,6 +15,7 @@ function prdtCtrl(api, productSrv, $location, $state) {
 	ctrl.cartItem = [];
 
 	ctrl.categories = [
+		{label:'Show all'},
 		{label:'Country',value:'country'},
 		{label:'Pop',value:'pop'},
 		{label:'Rap/Hip-Hop',value:'rap/hip-Hop'},
