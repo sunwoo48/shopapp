@@ -23,6 +23,10 @@ function prdtCtrl(api, productSrv, $location, $state) {
 	];
 	ctrl.products = this.prdtSrv.products;
 
+	ctrl.curPage = 0;
+	ctrl.itemsPerPage = 6;
+	ctrl.numPages = Math.ceil(ctrl.products.length / ctrl.itemsPerPage);
+
 }
 
 prdtCtrl.prototype.submitProduct = function() {

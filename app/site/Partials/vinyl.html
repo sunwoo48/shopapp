@@ -110,7 +110,8 @@
 		<div class="wrapper">
 		<div class="row">
 				<div ng-repeat="product in ctrl.products
-				| filter:search">
+				| filter:search
+				| limitTo:ctrl.itemsPerPage:ctrl.curPage * ctrl.itemsPerPage" >
 					<div class="col-md-4" "col-xs-12">
 					
 						<img src="{{product.image}}" width="300" height="300">
@@ -122,23 +123,31 @@
 					</div>
 				</div>
 		</div>
-		</div>
+	</div>
 
-		
+			
+    <button class="btn btn-default" 
+            ng-click="ctrl.curPage = ctrl.curPage - 1"
+            ng-disabled="ctrl.curPage == 0"
+            >
+      <
+    </button>
+    
+    page {{ctrl.curPage + 1}} of {{ctrl.numPages}}
+    
 
-<!-- 			<div ng-repeat="product in ctrl.products 
-              | filter: {Title:search}
-              | filter:{category:ctrl.category}">
-				<div class="more_listing">
-					<a href="#" class="more_listing_btn">View More</a>
-				</div>
-			</div>	 -->	
-		
+    <button class="btn btn-default" 
+            ng-click="ctrl.curPage = ctrl.curPage + 1"
+            ng-disabled="ctrl.curPage == ctrl.numPages - 1"
+            >>
+    </button>
+	
 <div class="more_listing">
 				<a href="#" class="more_listing_btn">View More Vinyl</a>
 				<br>
 			</div>
 	</section>	
+
 
 	<!--  end listing section  -->
 	
