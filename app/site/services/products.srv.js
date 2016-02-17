@@ -5,6 +5,7 @@ function ProductService($state,api){
 	this.api = api;
 	this.state = $state;
 	this.products = [];
+	this.cartItems = [];
 }
 
 ProductService.prototype.getProducts = function(){
@@ -92,4 +93,12 @@ ProductService.prototype.removeProduct = function(productId){
 			delete this.products[index];
 		}
 	}
+}
+
+ProductService.prototype.addToCart = function(product) {
+	console.log("input success");
+	this.cartItems.push(product);
+
+
+
 }

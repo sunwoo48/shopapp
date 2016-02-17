@@ -5,6 +5,7 @@ function prdtCtrl(api, productSrv, $location, $state) {
 	var ctrl = this;
 	this.prdtSrv = productSrv;
 	this.$state = $state;
+	this.cartStatus = this.prdtSrv.cartItems
 	
 	ctrl.product = {
 		
@@ -12,8 +13,6 @@ function prdtCtrl(api, productSrv, $location, $state) {
 
 
 	ctrl.cartItem = [];
-	console.log("-----------");
-	console.log(ctrl.cartItem);
 
 	ctrl.categories = [
 		{label:'Country',value:'country'},
@@ -23,7 +22,6 @@ function prdtCtrl(api, productSrv, $location, $state) {
 		{label:'Rock',value:'rock'},
 	];
 	ctrl.products = this.prdtSrv.products;
-	console.log(this.prdtSrv.product);
 
 }
 
@@ -43,8 +41,6 @@ prdtCtrl.prototype.submitProduct = function() {
 }
 
 prdtCtrl.prototype.updateProduct = function() {
-	//console.log(this.product);
-	//console.log(this.product.id);
 	this.prdtSrv.updateProduct(this.product,this.product.id);
 }
 
@@ -75,11 +71,9 @@ prdtCtrl.prototype.logout = function() {
 }
 
 prdtCtrl.prototype.addItem = function(product){
-	console.log(product);
-	console.log(product.id);
-	this.prdtSrv.updateProductList(product,product.id);
-	console.log(this.prdtSrv.products);
-	//this.cartItem.push(product);
-	//console.log(this.cartItem);
-	//this.$state.go('cart');
-};
+
+	product.quantity = 1;
+	this.prdtSrv.addToCart(product);
+	console.log(this.cartItem);
+
+}

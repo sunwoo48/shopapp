@@ -21,7 +21,7 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
   .state('cart',{
     url:'/cart',
     templateUrl:'site/partials/cart.html',
-    controller:'prdtCtrl as ctrl',
+    controller:'cartCtrl as ctrl',
       resolve: {
       products:function(productSrv){
         return productSrv.getProducts();
