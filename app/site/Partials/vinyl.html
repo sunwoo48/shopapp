@@ -35,7 +35,7 @@
 			</form>
 			<!-- <a href="#" class="advanced_search_icon" id="advanced_search_btn"></a> -->
 		</div>
-	</section>
+	
 		<!-- <div class="advanced_search">
 			<div class="wrapper">
 				<span class="arrow"></span>
@@ -62,10 +62,8 @@
 	<!--  end search section  -->
 	
 	<!-- Category/Genre Search begins here -->
-	<section>
-		<div class="categories">
-			Pick a genre:  <select class="form-control" ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category"></select>
-		</div>
+	
+		
 	</section>
 	<!-- Category/Genre Search ends here -->
 
@@ -78,8 +76,12 @@
 
 
 	<section class="listings">
+		<div class="categories">
+			Pick a genre:  <select class="form-control" ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category"></select>
+		</div>
 		<div class="wrapper">
 			<h2>{{ctrl.category}}</h2>
+
 			<ul class="properties_list">
 
 
@@ -100,10 +102,7 @@
 					</div>
 				</li>
 			</ul>
-			<div class="more_listing">
-				<a href="#" class="more_listing_btn">View More Vinyl</a>
-				<br>
-			</div>
+			
 		</div>
 	</section>
 
@@ -133,7 +132,10 @@
 				</div>
 			</div>	 -->	
 		
-
+<div class="more_listing">
+				<a href="#" class="more_listing_btn">View More Vinyl</a>
+				<br>
+			</div>
 	</section>	
 
 	<!--  end listing section  -->
