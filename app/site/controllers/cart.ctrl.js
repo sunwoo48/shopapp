@@ -6,8 +6,11 @@ function cartCtrl(api, productSrv, $location, $state) {
 	this.prdtSrv = productSrv;
 	this.$state = $state;
 	this.cartStatus = this.prdtSrv.cartItems
+
 	this.total = 0; 
-	this.tax = this.total * 0.13;
+	this.tax = 0;
+	this.finalTotal = 0;
+	this.totalSubtract = 0;
 
 
 	ctrl.product = {}
@@ -35,3 +38,40 @@ cartCtrl.prototype.try = function(name) {
 	this.tax = this.total * 0.13;
 	this.finalTotal = this.tax + this.total;
 }
+
+var handler = StripeCheckout.configure({
+	key: 'pk_test_2Ve84uOMhFuARr2DfVADUPRk',
+	image: 'assets/img/logo.png',
+	locale: 'auto',
+	token: function(token) {
+	  console.log(token)
+	}
+});
+
+cartCtrl.prototype.stripePaymentHandler = function() {
+	console.log('start');
+    handler.open({
+      name: 'Vinyl Shop',
+      description: 'Get Yo Wax',
+      currency: "cad",
+      amount: Math.ceil(this.finalTotal*100),
+    });
+}
+
+cartCtrl.prototype.deleteitem = function(product) {
+
+	var indexat = this.cartStatus.indexOf(product);
+	this.cartStatus.splice(indexat, 1);
+
+	this.totalSubtract = product.price * product.quantity;
+	this.total = this.totalSubtract;
+	this.tax = this.total * 0.13;
+	this.finalTotal = this.tax + this.total;
+
+	if(this.cartStatus.length === 0) {
+		this.total = 0.0;
+		this.tax = 0.0;
+		this.finalTotal = 0.0;
+	}
+}
+

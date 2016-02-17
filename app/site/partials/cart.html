@@ -47,7 +47,7 @@
                             <input type="number" ng-model="product.quantity" ng-click="ctrl.try(product, product.quantity)" style="text-align:center;"/>   
                             </td>
                             <td>{{ctrl.albumTotal(product.quantity, product.price) | currency}}</td>
-                            <td align="center">[<a href ng-click="">x</a>]</td>
+                            <td align="center">[<a ng-click="ctrl.deleteitem(product)" >x</a>]</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -73,9 +73,9 @@
                     </table>
 ​
 
-            <div class="more_listing">
-                <a href="#/checkout" class="more_listing_btn">SUBMIT ORDER</a>
-            </div>
+                   <section class="listings">
+                      <div class="more_listing"><button ng-click="ctrl.stripePaymentHandler()" class="more_listing_btn">Submit Order</button><br></div>
+                  </section>
               </div>
           
       </div>
