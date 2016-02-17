@@ -82,7 +82,7 @@
 		<div class="wrapper">
 			<h2>{{ctrl.category}}</h2>
 
-			<ul class="properties_list">
+<!-- 			<ul class="properties_list">
 
 
 
@@ -101,7 +101,7 @@
 					</br>
 					</div>
 				</li>
-			</ul>
+			</ul> -->
 			
 		</div>
 	</section>
@@ -111,8 +111,10 @@
 		<div class="row">
 				<div ng-repeat="product in ctrl.products
 				| filter:search
-				| limitTo:ctrl.itemsPerPage:ctrl.curPage * ctrl.itemsPerPage" >
-					<div class="col-md-4" "col-xs-12">
+				| filter: ctrl.category
+				| limitTo:ctrl.itemsPerPage:ctrl.curPage * ctrl.itemsPerPage">
+
+				<div class="col-md-4" "col-xs-12">
 					
 						<img src="{{product.image}}" width="300" height="300">
 						<button class="addCartbtn" ng-click="ctrl.addItem(product)"> <i class="fa fa-cart-plus"></i> Add </button>
@@ -123,8 +125,7 @@
 					</div>
 				</div>
 		</div>
-	</div>
-
+		</div>
 			
     <button class="btn btn-default" 
             ng-click="ctrl.curPage = ctrl.curPage - 1"
@@ -141,13 +142,14 @@
             ng-disabled="ctrl.curPage == ctrl.numPages - 1"
             >>
     </button>
-	
+
+		
+		
 <div class="more_listing">
 				<a href="#" class="more_listing_btn">View More Vinyl</a>
 				<br>
 			</div>
 	</section>	
-
 
 	<!--  end listing section  -->
 	
