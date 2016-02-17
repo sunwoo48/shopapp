@@ -82,7 +82,7 @@
 		<div class="wrapper">
 			<h2>{{ctrl.category}}</h2>
 
-			<ul class="properties_list">
+<!-- 			<ul class="properties_list">
 
 
 
@@ -101,7 +101,7 @@
 					</br>
 					</div>
 				</li>
-			</ul>
+			</ul> -->
 			
 		</div>
 	</section>
@@ -110,7 +110,8 @@
 		<div class="wrapper">
 		<div class="row">
 				<div ng-repeat="product in ctrl.products
-				| filter:search">
+				| filter:search
+				| filter: ctrl.category">
 					<div class="col-md-4" "col-xs-12">
 					
 						<img src="{{product.image}}" width="300" height="300">
